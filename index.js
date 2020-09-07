@@ -12,6 +12,7 @@ const server = http.createServer(app);
 const io = socketio(server);
 
 app.use(router);
+app.use(express.json());
 app.use(function (request, response, next) {
   response.header("Access-Control-Allow-Origin", "*");
   response.header(
